@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class AnimJsonLoader : MonoBehaviour
 {
+    public string animationName = "anim";
     public RootObject rootObject;
 
     public string jsonInput;
@@ -52,7 +53,7 @@ public class AnimJsonLoader : MonoBehaviour
 
 
 #if UNITY_EDITOR
-        AssetDatabase.CreateAsset(clip, "Assets/_Animation/clip.anim");
+        AssetDatabase.CreateAsset(clip, "Assets/_Animation/" + animationName + ".anim");
         AssetDatabase.SaveAssets();
 #endif
 
