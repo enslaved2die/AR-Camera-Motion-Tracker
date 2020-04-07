@@ -1,10 +1,15 @@
 ﻿using UnityEditor;
 using UnityEngine;
 using System;
+using System.IO;
+using UnityEngine.UI;
 
 public class AnimJsonLoader : MonoBehaviour
 {
     public TextAsset jsonInput;
+    public TMPro.TMP_InputField inputField;
+    public Button loadBtn, ClearBtn;
+
     [Space]
     private string animationName;
     public string assetPath = "Assets/_Animation/";
@@ -25,6 +30,17 @@ public class AnimJsonLoader : MonoBehaviour
     private void Awake()
     {
         targetAnimator.enabled = false;
+        inputField.text = "Drag and Drop a .animJson into the window!";
+        loadBtn.interactable = false;
+    }
+
+    public void ClearFile()
+    {
+        if (targetAnimator.gameObject.GetComponent<Animation>())
+            DestroyImmediate(targetAnimator.gameObject.GetComponent<Animation>());
+        jsonInput = null;
+        inputField.text = "Drag and Drop a .animJson into the window!";
+        loadBtn.interactable = true;
     }
 
     [ContextMenu("Generate Animation Clip from String")]
@@ -33,9 +49,17 @@ public class AnimJsonLoader : MonoBehaviour
         GenerateAnimationClip(jsonInput.text);
     }
 
+    public void GenerateFromFile(string path)
+    {
+        StreamReader reader = new StreamReader(path);
+        Debug.LogError(reader.ReadToEnd());
+        GenerateAnimationClip(reader.ReadToEnd());
+    }
+
     public void GenerateAnimationClip(string input)
     {
         animationName = jsonInput.name;
+
 
         rootObject = JsonUtility.FromJson<RootObject>(input);
         detectedFrametime = rootObject.frametime;
@@ -64,6 +88,14 @@ public class AnimJsonLoader : MonoBehaviour
             wRot.AddKey(detectedFrametime * i, rootObject.frameData[i].rotation.w);
         }
 
+        targetAnimator.enabled = false;
+        Animation anim = targetAnimator.gameObject.AddComponent(typeof(Animation)) as Animation;
+        anim.playAutomatically = false;
+        clip.legacy = true;
+        clip.wrapMode = WrapMode.Loop;
+        inputField.text = "Press Clear before you Load another File!";
+        loadBtn.interactable = false;
+
         clip.SetCurve("", typeof(Transform), "localPosition.x", xPos);
         clip.SetCurve("", typeof(Transform), "localPosition.y", yPos);
         clip.SetCurve("", typeof(Transform), "localPosition.z", zPos);
@@ -82,8 +114,11 @@ public class AnimJsonLoader : MonoBehaviour
 
         targetAnimator.runtimeAnimatorController = animatorOverride;
 
-        targetAnimator.enabled = true;
+        anim.clip = clip;
+        anim.AddClip(clip, clip.name);
+        anim.Play();
 
+        //targetAnimator.enabled = true;
     }
 
 }

@@ -314,6 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 301707225}
   - component: {fileID: 301707224}
+  - component: {fileID: 301707226}
   m_Layer: 0
   m_Name: Loader
   m_TagString: Untagged
@@ -334,6 +335,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jsonInput: {fileID: 4900000, guid: a8d16e605922c6c47ac55bd7da3c9516, type: 3}
+  inputField: {fileID: 866110670}
+  loadBtn: {fileID: 1979708800}
+  ClearBtn: {fileID: 1099693022}
   assetPath: Assets/_Animation/Generated/
   targetAnimator: {fileID: 2112639563}
   animatorOverride: {fileID: 22100000, guid: 59b5ae9c0469f624c80ae670561a4f65, type: 2}
@@ -80279,6 +80283,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &301707226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 301707223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6f79bc94ddcdc4d90182037dad6148, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &309016515
 GameObject:
   m_ObjectHideFlags: 0
@@ -81003,7 +81019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Enter text...
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d328c304c3974dc45a3579ce7f188799, type: 2}
   m_sharedMaterial: {fileID: 5699198388042308926, guid: d328c304c3974dc45a3579ce7f188799,
@@ -81032,8 +81048,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -81073,13 +81089,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 486178107}
-    characterCount: 13
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -81279,8 +81295,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: d328c304c3974dc45a3579ce7f188799, type: 2}
+  m_sharedMaterial: {fileID: 5699198388042308926, guid: d328c304c3974dc45a3579ce7f188799,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -81305,8 +81322,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 14
-  m_fontSizeBase: 14
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -81704,7 +81721,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813691317}
-  m_LocalRotation: {x: 0.10464309, y: 0.1471216, z: -0.015654428, w: 0.98344296}
+  m_LocalRotation: {x: 0.10465988, y: 0.14606108, z: -0.015541582, w: 0.98360103}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -81789,7 +81806,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 866110671}
   m_TextViewport: {fileID: 1966105375}
   m_TextComponent: {fileID: 564316767}
@@ -81806,7 +81823,7 @@ MonoBehaviour:
   m_HideSoftKeyboard: 0
   m_CharacterValidation: 0
   m_RegexValue: 
-  m_GlobalPointSize: 14
+  m_GlobalPointSize: 20
   m_CharacterLimit: 0
   m_OnEndEdit:
     m_PersistentCalls:
@@ -81840,7 +81857,7 @@ MonoBehaviour:
   m_CaretWidth: 1
   m_ReadOnly: 0
   m_RichText: 1
-  m_GlobalFontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_GlobalFontAsset: {fileID: 11400000, guid: d328c304c3974dc45a3579ce7f188799, type: 2}
   m_OnFocusSelectAll: 1
   m_ResetOnDeActivation: 1
   m_RestoreOriginalTextOnEscape: 1
@@ -82075,8 +82092,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1045340366}
-  m_LocalRotation: {x: 0.10464304, y: 0.1471216, z: -0.015654454, w: 0.98344296}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.21227217, y: 0.14346346, z: -0.03152164, w: 0.96610826}
+  m_LocalPosition: {x: 0, y: 0.55572414, z: -0.013146877}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 471060913}
@@ -82279,9 +82296,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_MethodName: switchFPS
-        m_Mode: 3
+      - m_Target: {fileID: 301707224}
+        m_MethodName: ClearFile
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -82426,7 +82443,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1120868042}
   - component: {fileID: 1120868041}
-  - component: {fileID: 1120868043}
   m_Layer: 8
   m_Name: RenderingController
   m_TagString: Untagged
@@ -82461,23 +82477,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1120868043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1120868040}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: d7bb9798f43ed6746b4af6c0e25e3072, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
 --- !u!1 &1167844387
 GameObject:
   m_ObjectHideFlags: 0
@@ -82488,7 +82487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1167844388}
   m_Layer: 5
-  m_Name: JSONInput
+  m_Name: Status
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82797,7 +82796,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391506466}
-  m_LocalRotation: {x: 0.10464309, y: 0.1471216, z: -0.015654434, w: 0.98344296}
+  m_LocalRotation: {x: 0.10465986, y: 0.14606106, z: -0.015541606, w: 0.98360103}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -82946,7 +82945,6 @@ GameObject:
   - component: {fileID: 1634630321}
   - component: {fileID: 1634630320}
   - component: {fileID: 1634630323}
-  - component: {fileID: 1634630324}
   m_Layer: 0
   m_Name: OverviewCam
   m_TagString: MainCamera
@@ -83012,7 +83010,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634630319}
-  m_LocalRotation: {x: 0.10464311, y: 0.14712161, z: -0.015654432, w: 0.98344296}
+  m_LocalRotation: {x: 0.10465989, y: 0.14606108, z: -0.015541584, w: 0.98360103}
   m_LocalPosition: {x: 0, y: 3.48, z: -2.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -83053,66 +83051,6 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1634630324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1634630319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 1634630322}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 1
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
 --- !u!1 &1787625325
 GameObject:
   m_ObjectHideFlags: 0
@@ -83767,7 +83705,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: JSON Input
+  m_text: 'Status:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d328c304c3974dc45a3579ce7f188799, type: 2}
   m_sharedMaterial: {fileID: 5699198388042308926, guid: d328c304c3974dc45a3579ce7f188799,
@@ -83837,10 +83775,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 2101830182}
-    characterCount: 10
+    characterCount: 7
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -83953,7 +83891,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112639559}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 22100000, guid: 59b5ae9c0469f624c80ae670561a4f65, type: 2}
   m_CullingMode: 0
