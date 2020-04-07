@@ -3,7 +3,12 @@ guid: cad1ac612f36b3b45ab09380b7b700ea
 ModelImporter:
   serializedVersion: 19300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CameraMat
+    second: {fileID: 2100000, guid: ea4f62ab53cd7794aaacc778be0ccbbe, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

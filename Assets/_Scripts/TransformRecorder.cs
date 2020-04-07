@@ -24,7 +24,7 @@ public class TransformRecorder : MonoBehaviour
 
     List<float> frameRates = new List<float>() { 24, 25, 30, 50, 60 };
     [System.Serializable]
-    public enum FrameRates { _10, _23_976, _24, _25, _29_97, _30, _48, _50, _60 };
+    public enum FrameRates { _10, _23_976, _24, _25, _29_97, _30, _40, _48, _50, _60 };
 
     public FrameRates frameRate;
     float Rate;
@@ -121,6 +121,9 @@ public class TransformRecorder : MonoBehaviour
                 break;
             case FrameRates._30:
                 Rate = 30f;
+                break;
+            case FrameRates._40:
+                Rate = 40f;
                 break;
             case FrameRates._48:
                 Rate = 48f;
